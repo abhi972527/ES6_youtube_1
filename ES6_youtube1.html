@@ -6,18 +6,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<link rel="stylesheet" href="./style/style.css">
 <style>
-    #videos {
+    /* #videos {
         display: grid;
         grid-template-columns: repeat(4, 20%);
         grid-gap: 5%;
     }
+    #box {
+        align-items: center;
+        padding-left: 34%;
+    }
+    #nav {
+        text-align: center;
+        font-size: 40px;
+    }
+    input {
+        width: 400px;
+        height: 30px;
+    }
+    button {
+        height: 30px; 
+        width: 100px;
+        
+    } */
 </style>
 <body>
-    
-    <input type="text" id="query" placeholder="Search for a Video">
 
-    <button onclick="searchVideos()">Search</button>
+    <div id="navbar">
+
+    </div>
+
+    <div id="nav">
+        <h1>YouTube</h1>
+    </div>
+    
+    <div id="box">
+        <input type="text" id="query" placeholder="Search for a Video">
+
+        <button onclick="searchVideos()">Search</button>
+    </div>
 
     <div id="videos"></div>
 
@@ -69,6 +97,16 @@ function appendVideos (video_data) {
         videos.append(div);
     });
 }
+
+</script>
+
+<script type="module">
+
+    import navbar from "./nav/navbar.js";
+
+    console.log(navbar);
+    let navbar_div = document.getElementById("navbar");
+    navbar_div.innerHTML =  navbar();
 
 </script>
 
